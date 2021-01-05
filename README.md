@@ -17,12 +17,6 @@ npm install
 node index.js
 ```
 
-## Run tests
-
-```sh
-npm run start
-```
-
 ## Author
 
 👤 **Posseidon0110**
