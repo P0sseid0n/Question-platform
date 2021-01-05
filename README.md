@@ -19,7 +19,7 @@ node index.js
 
 ## Author
 
-👤 **Posseidon0110**
+👤 **Posseidon**
 
 * Website: https://posseidon.netlify.app/
 * Twitter: [@P0sseid0n](https://twitter.com/P0sseid0n)
