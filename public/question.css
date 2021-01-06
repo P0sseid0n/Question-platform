@@ -3,11 +3,11 @@ html, body{
     background-color: rgba(0,0,100,.03);
 }
 
-.container{
+.container#question{
     height: calc(100% - 60px);
 }
 
-.card{
+#question .card{
     position: relative;
     top: 50%;
     transform: translateY(-50%);

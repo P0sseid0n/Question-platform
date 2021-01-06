@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="question.css">
+</head>
+<body>
+    <%- include('./partials/navbar.ejs') %> 
+
+    <div class="container ">
+        <div class="card mt-4">
+            <div class="card-header">
+                <h3><%= question.id  %># <%= question.title  %> </h3>
+            </div>
+            <div class="card-body">
+              <p><%= question.question %></p>
+            </div>
+            <div class="card-footer">
+                <div class="mb-3">
+                    <span><%= question.author %></span>
+                    <span class="float-end"><%= question.createdAt %></span>
+                </div>
+            </div>
+        </div>
+
+        <% answers.forEach(answer => {%>
+            <div class="card mt-4">
+                <div class="card-body">
+                    <p><%= answer.answer %></p>
+                </div>
+                <div class="card-footer">
+                    <div class="mb-3">
+                        <span><%= answer.author %></span>
+                        <span class="float-end"><%= answer.createdAt %></span>
+                    </div>
+                </div>
+            </div>
+        <% }) %> 
+
+          <div class="card mt-4">
+            <form method="POST" action="/reply" class="p-2">
+                <h2 class="text-center mb-3">Answer</h2>
+                <input type="hidden" name="questionId" value="<%= question.id  %>">
+    
+                <label for="answer">Text: </label>
+                <textarea class="form-control" name="answer" id="answer" required></textarea>
+    
+                <div class="d-flex bd-highlight mt-2">
+                    <div class="bd-highlight">
+                        <label for="author">Your nickname:</label>
+                        <input type="text" id="author" name="author" class="form-control" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary float-end mt-2">Answer</button>
+            </form>
+          </div>
+    </div>
+
+</body>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+</html>

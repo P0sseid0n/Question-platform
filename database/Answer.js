@@ -1,12 +1,12 @@
 const Sequelize = require('sequelize')
 const connection = require('./database')
 
-const Question = connection.define('questions', {
-    title: {
-        type: Sequelize.STRING,
+const Answer = connection.define('answers', {
+    questionId: {
+        type: Sequelize.INTEGER,
         allowNull: false
     },
-    question: {
+    answer: {
         type: Sequelize.TEXT,
         allowNull: false
     },
@@ -16,6 +16,6 @@ const Question = connection.define('questions', {
     }
 })
 
-Question.sync({ force: false })
+Answer.sync({ force: false })
 
-module.exports = Question
+module.exports = Answer

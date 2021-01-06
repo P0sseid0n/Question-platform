@@ -1,8 +1,9 @@
 const Sequelize = require('sequelize')
 
-const connection = new Sequelize('questiontable','root','PASSWORD', {
+const connection = new Sequelize('questionplatform','root','PASSWORD', {
     host: 'localhost',
-    dialect: 'mysql'
+    dialect: 'mysql',
+    logging: false
 })
 
 module.exports = connection

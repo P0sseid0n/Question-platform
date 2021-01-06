@@ -10,27 +10,26 @@
 </head>
 <body>
     <%- include('./partials/navbar.ejs') %> 
-    <div class="container">
+    <div class="container" id="question">
         <div class="card">
             <div class="card-header">
-                <h2 class="text-center p-2">Make your question.</h2>
+                <h2 class="text-center p-2">Ask your question.</h2>
             </div>
             <div class="card-body">
                 <form method="POST" action="/sending">
                     <label for="title">Question title:</label>
-                    <input class="form-control" type="text" name="title" id="title" required>
-                    <br>
+                    <input class="form-control mb-2" type="text" name="title" id="title" required>
         
                     <label for="question">Question: </label>
                     <textarea class="form-control" name="question" id="question" required></textarea>
         
-                    <div class="d-flex bd-highlight mb-3">
-                        <div class="p-2 bd-highlight">
+                    <div class="d-flex bd-highlight mt-2">
+                        <div class="bd-highlight">
                             <label for="author">Your nickname:</label>
                             <input type="text" id="author" name="author" class="form-control" required>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary float-end">Send question</button>
+                    <button type="submit" class="btn btn-primary float-end mt-2">Send question</button>
                 </form>
             </div>
         </div>
