@@ -8,7 +8,6 @@ const answerModel = require('./database/Answer')
 connection.authenticate().then(() => console.log('Authenticated')).catch(erro => console.error(erro))
 
 app.set('view engine', 'ejs')
-app.use(express.static('public'))
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
