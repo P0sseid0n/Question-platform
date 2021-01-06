@@ -4,7 +4,7 @@
 [![Twitter: P0sseid0n](https://img.shields.io/twitter/follow/P0sseid0n.svg?style=social)](https://twitter.com/P0sseid0n)
 
 > This is my version of the first project in the &#34;Formação Node.js&#34; course. 
-> Using EJS, MYSQL, EXPRESS, BODY-PARSER, SEQUELIZE
+> Using EJS, MYSQL, EXPRESS, BODY-PARSER, SEQUELIZE.
 
 ## Install
 
