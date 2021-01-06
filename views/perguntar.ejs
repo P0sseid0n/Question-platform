@@ -3,34 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+    <title>Questions</title>
 
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="perguntar.css">
+    <link rel="stylesheet" href="question.css">
 </head>
 <body>
     <%- include('./partials/navbar.ejs') %> 
     <div class="container">
         <div class="card">
             <div class="card-header">
-                <h2 class="text-center p-2">Faça sua pergunta</h2>
+                <h2 class="text-center p-2">Make your question.</h2>
             </div>
             <div class="card-body">
-                <form>
-                    <label for="titulo">Titulo da pergunta:</label>
-                    <input class="form-control" type="text" name="titulo" id="titulo">
+                <form method="POST" action="/sending">
+                    <label for="title">Question title:</label>
+                    <input class="form-control" type="text" name="title" id="title" required>
                     <br>
         
-                    <label for="pergunta">Pergunta: </label>
-                    <textarea class="form-control" name="pergunta" id="pergunta" placeholder="Pergunta"></textarea>
+                    <label for="question">Question: </label>
+                    <textarea class="form-control" name="question" id="question" required></textarea>
         
                     <div class="d-flex bd-highlight mb-3">
                         <div class="p-2 bd-highlight">
-                            <label for="chamado">Como quer ser chamado?</label>
-                            <input type="text" id="chamado" class="form-control">
+                            <label for="author">Your nickname:</label>
+                            <input type="text" id="author" name="author" class="form-control" required>
                         </div>
                     </div>
-                    <button type="submit"  class="btn btn-primary float-end">Enviar pergunta</button>
+                    <button type="submit" class="btn btn-primary float-end">Send question</button>
                 </form>
             </div>
         </div>
